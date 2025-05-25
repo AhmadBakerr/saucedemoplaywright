@@ -18,7 +18,7 @@ export class InventoryPage extends BasePage {
   async sortProductsBy(option: 'az' | 'za' | 'lohi' | 'hilo') {
     await this.page.waitForSelector(this.productSortDropdown, { state: 'visible', timeout: 10000 });
     await this.page.selectOption(this.productSortDropdown, option);
-    await this.page.waitForTimeout(500); // انتظار قصير للتأكد من تطبيق الفرز
+    await this.page.waitForTimeout(500); 
   }
 
   async getProductNames(): Promise<string[]> {
